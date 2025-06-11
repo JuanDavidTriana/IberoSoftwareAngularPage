@@ -1,0 +1,208 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Footer principal: fondo, color y tipografía */
+.main-footer {
+  background: linear-gradient(135deg, #232323 0%, #1a1a1a 100%);
+  color: #fff;
+  font-family: var(--font-main);
+  padding: 4rem 2rem 2rem;
+}
+
+/* Contenedor principal de columnas del footer */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* Cada columna del footer */
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+  margin-bottom: 2rem;
+}
+
+/* Columna de logo y políticas */
+.footer-logo-col {
+  flex: 1 1 260px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo institucional */
+.footer-logo {
+  width: 120px;
+  margin-bottom: 1.5rem;
+}
+
+/* Lista de políticas institucionales */
+.footer-policies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-policies li {
+  font-size: 0.95rem;
+  color: var(--color-footer-policy);
+  margin-bottom: 0.5rem;
+}
+
+/* Lista de enlaces rápidos */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+.footer-links a:hover {
+  color: #FFC300;
+}
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #FFC300;
+  transition: width 0.3s ease;
+}
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Información de sedes y contacto */
+.footer-branch strong {
+  color: var(--color-footer-branch);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.footer-branch p {
+  margin: 0.2rem 0 1rem 0;
+  color: var(--color-footer-contact);
+  font-size: 0.97rem;
+}
+.footer-contact {
+  margin-bottom: 1rem;
+  color: var(--color-footer-contact);
+  font-size: 0.97rem;
+}
+.footer-contact strong {
+  color: var(--color-footer-branch);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Columna de certificaciones y redes sociales */
+.footer-cert-social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-certifications span,
+.footer-social span {
+  font-weight: 600;
+  color: var(--color-footer-branch);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Logos de certificaciones */
+.cert-logos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.cert-icon {
+  width: 50px;
+  height: auto;
+  background: var(--color-footer-cert-bg);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.social-icons a {
+  color: var(--color-footer-social);
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: var(--color-footer-social-hover);
+}
+
+/* Línea divisoria visual */
+.footer-divider {
+  border: none;
+  border-top: 1px solid var(--color-footer-divider);
+  margin: 2rem 0 1.5rem 0;
+}
+
+/* Información legal y derechos reservados */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+.footer-bottom p {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .footer-container {
+    gap: 2rem;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

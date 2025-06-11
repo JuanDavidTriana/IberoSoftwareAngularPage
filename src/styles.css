@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --color-primary: #FFC300;
+  --color-primary-dark: #B38600;
+  --color-secondary: #232323;
+  --color-accent: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-bg: #f8f9fa;
+  --color-bg-dark: #181818;
+  --color-text: #333;
+  --color-text-light: #fff;
+  --color-border: #444;
+  --color-link: #007bff;
+  --color-link-hover: #0056b3;
+  --color-footer-bg: #232323;
+  --color-footer-divider: #444;
+  --color-footer-link: #ccc;
+  --color-footer-link-hover: #FFC300;
+  --color-footer-policy: #999;
+  --color-footer-branch: #fff;
+  --color-footer-contact: #bbb;
+  --color-footer-cert-bg: #fff;
+  --color-footer-cert-border: #e0e0e0;
+  --color-footer-social: #e0e0e0;
+  --color-footer-social-hover: #fff;
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  padding-top: 60px; /* Altura estándar del navbar de Bootstrap */
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Utilidades */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.bg-primary { background-color: var(--color-primary) !important; }
+.bg-secondary { background-color: var(--color-secondary) !important; }
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+  h5 { font-size: 1.25rem; }
+  h6 { font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.1rem; }
+  h6 { font-size: 0.95rem; }
+}

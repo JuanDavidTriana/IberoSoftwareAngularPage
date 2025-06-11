@@ -1,0 +1,36 @@
+<!-- Sección principal de personajes de Rick and Morty -->
+<section class="character-list-section">
+  <div class="character-list-container">
+    <h2 class="character-list-title">Personajes de Rick y Morty</h2>
+
+    <!-- Mensaje de error -->
+    <div *ngIf="error" class="error-message">
+      <i class="fas fa-exclamation-circle"></i> Error al cargar los personajes
+    </div>
+
+    <!-- Grid de personajes -->
+    <div *ngIf="characters.length > 0" class="character-grid">
+      <div *ngFor="let character of characters" class="character-card" (click)="goToCharacter(character.id)">
+        <img [src]="character.image" [alt]="character.name" class="character-image">
+        <div class="character-info">
+          <h3 class="character-name">{{ character.name }}</h3>
+          <p class="character-species">{{ character.species }}</p>
+          <span class="character-status" [ngClass]="{
+            'status-alive': character.status === 'Alive',
+            'status-dead': character.status === 'Dead',
+            'status-unknown': character.status === 'unknown'
+          }">
+            {{ character.status }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estado de carga -->
+    <div *ngIf="loading" class="loading-spinner">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+  </div>
+</section>
